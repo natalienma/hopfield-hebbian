@@ -15,14 +15,14 @@ spike: a brief electrical pulse the neuron sends down the axon once added up, if
 synapse: the gap between the axon and dendrite of two neurons
 - the thickness of the input/output line (axon/dendrite) = strength of activation
 
+threshold: an input must surpass this to fire. thresholds are learned for every neuron. 
+- adaptive threshold: a neuron's threshold can temporarily rise right ater it fires. also learnable
+
 association: 
+if neuron A fires, it will send the activation to B, which is added into B's total. Over time, if A and B keep firing together, the rule increases the weight at that connection. so it becomes more and more likely that A and B fire together.
 
+questions:
+1. Over time, if B often fires after A, we increase the weight `w` between the two. Isn't this artificially inflating the number of times B will fire? Why not let A naturally influence B?
+- `w` is randomly assigned at first. Updating it is just learning
 
-on STDP: t_pre and t_post are the times that each spike happened at one end of a neuron? where is this measured and is a spike just when the activation increases suddenly? the idea is that if two spikes are close in time, you infer that the first one caused the second one? im confused between neurons, the two ends of a neuron, and spikes. 
-
-
-
-why do we overwrite the entire weight matrix with new data every time? and why can we only overwrite 3%? if it was that easy, why haven't we been doing it before?
-
-
-
+2. why do we overwrite the entire weight matrix with new data every time? and why can we only overwrite 3%? if it was that easy, why haven't we been doing it before?
