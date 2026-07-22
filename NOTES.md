@@ -33,7 +33,7 @@ s(t)=k∑​δ(t−tk​)
 - ​δ, delta = spike shaped function that is 0 everywhere except when fired
 
 ### Neuron's voltage activity (in continuous calculus)
-τm​dtdV(t)​=−(V(t)−Vrest​)+RI(t)
+τm​dt/dV(t)​=−(V(t)−Vrest​)+RI(t)
 - V = voltage, activation
 - -(V(t) - Vrest) = bring back to resting voltage
 - RI(t) = incoming current pushing voltage up or down
